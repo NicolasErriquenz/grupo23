@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    background-color: #24252a;
+    background-color: #000;
 }
 
 li,
@@ -45,12 +45,26 @@ header {
     color: #008889;
 }
 
-.nav_links ul {}
-
 .nav_links li:hover {
     color: #555;
 }
 
+.container{
+    display: flex;
+    padding:10px;
+}
+.izquierda{
+    background: red;
+    width: 70%;
+    height: 800px;
+}
+.derecha{
+    background-color: white;
+    width: 30%;
+    height: 800px;
+    min-width: 400px;
+}
+    
 button {
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
