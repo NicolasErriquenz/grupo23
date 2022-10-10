@@ -1,101 +1,183 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
-nav{
-    background: rgb(16, 18, 41);
-    height: 80px;
-    width: 100%;
-}
-.enlace{
-    position: absolute;
-    padding: 20px 50px;
-}
-.logo{
-    height: 40px;
-}
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a{
-    color: #fff;
-    font-size: 18px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-li a.active, li a:hover{
-    background: #000090;
-    transition: .5s;
-}
-.checkbtn{
-    font-size: 30px;
-    color: #fff;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
-}
-section{
+body {
     background: url(../images/tiles.png);
     background-size: auto;
     background-position: center center;
     height: calc(100vh - 80px);
 }
 
-@media (max-width: 952px){
-    .enlace{
-        padding-left: 20px;
+header {
+    width: 100%;
+    position: fixed;
+}
+
+header nav {
+    background: #024959;
+}
+
+.menu_bar {
+    display: none;
+}
+
+header nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li span {
+    margin-right: 10px;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background: #037E8C;
+    transition: all .5s;
+}
+
+section {
+    padding: 20px;
+}
+
+ul {
+    text-align: center;
+    transition: all .5s;
+}
+
+@media screen and (max-width:800px) {
+    header nav {
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+        /*top:0px;*/
+        overflow: auto;
     }
-    nav ul li a{
-        font-size: 16px;
+
+    .menu_bar {
+        display: block;
+        width: 100%;
+        background: #ccc;
+    }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: #024959;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu_bar span {
+        float: right;
+        font-size: 40px;
+    }
+
+    header nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+    }
+
+    main {
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    aside,
+    .section_container {
+        width: auto;
     }
 }
 
-@media (max-width: 858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    li a:hover, li a.active{
-        background: none;
-        color: red;
-    }
-    #check:checked ~ ul{
-        left:0;
-    }
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 75px;
+}
+
+.section_container {
+    width: 800px;
+    margin: 10px;
+    height: 200px;
+    background-color: bisque;
+    border: 1px solid black
+}
+
+aside {
+    background-color: rgb(173, 171, 171);
+    width: 500px;
+    margin: 10px;
+    box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+aside>h2 {
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.tag_container {
+    width: 100%;
+    margin: 20px 10px 20px 10px;
+}
+
+.tag_activo {
+    background-color: rgb(128, 123, 123);
+}
+
+.tag {
+    border-radius: 45px;
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+    height: 21px;
+    margin-top: 10px;
+    display: inline-flex;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color:black;
+}
+
+.tag:hover {
+    background: white;
+    color: black;
+    transition: all .5s;
+}
+
+.iframe_container {
+
+    text-align: center;
+    border-top: 1px solid #000;
+    margin-top: 20px;
+    ;
+}
+
+.iframe {
+    padding: 10px;
 }
