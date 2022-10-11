@@ -123,6 +123,10 @@ main {
 .section_container {
     width: 800px;
     margin: 10px;
+}
+
+section {
+    margin: 10px;
     background-color: bisque;
     border: 1px solid black;
 }
@@ -214,17 +218,18 @@ canvas {
     width: 100% !important;
     height: 100% !important;
     overflow: hidden;
+    margin-top: 10px;
 }
 
-.resultado_GOL{
+.resultado_GOL {
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-ol{
+ol {
     margin: 20px;
 }
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
