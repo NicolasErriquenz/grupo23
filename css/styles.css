@@ -123,9 +123,8 @@ main {
 .section_container {
     width: 800px;
     margin: 10px;
-    height: 200px;
     background-color: bisque;
-    border: 1px solid black
+    border: 1px solid black;
 }
 
 aside {
@@ -141,6 +140,11 @@ aside>h2 {
     text-decoration: underline;
 }
 
+section>h1 {
+    padding: 10px;
+}
+
+/* VIDEO TAGS */
 .tag_container {
     width: 100%;
     margin: 20px 10px 20px 10px;
@@ -161,7 +165,7 @@ aside>h2 {
     margin: 5px;
     padding: 10px;
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
 .tag:hover {
@@ -180,4 +184,38 @@ aside>h2 {
 
 .iframe {
     padding: 10px;
+}
+
+/* END VIDEO TAGS */
+
+
+/*GAME OF LIFE*/
+.gameoflife_controls {
+    padding: 20px 0px;
+}
+
+button {
+    color: white;
+    background-color: #037E8C;
+    border-radius: 10px;
+    border: 0;
+    padding: 5px 20px;
+    margin: 5px 20px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #024959;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+}
+
+.hide{
+    display:none;
 }

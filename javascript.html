@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Grupo23 - CaC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="menu_bar">
+            <a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menu</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#"><span class="fa fa-home"></span>Inicio</a></li>
+                <li><a href="#"><span class="fa fa-heading"></span>Html</a></li>
+                <li><a href="#"><span class="fa fa-edit"></span>Css</a></li>
+                <li><a href="#"><span class="fa fa-code"></span>JavaScript</a></li>
+                <li><a href="#"><span class="fa fa-envelope"></span>Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="section_container">
+            <section>
+                <h1>Game of Life</h1>
+                <p>
+                    El Juego de la vida es un autómata celular diseñado por el matemático británico John Horton Conway en 1970. 
+                    Es un juego de cero jugadores, en el que su evolución es determinada por un estado inicial, sin requerir intervención adicional. 
+                    Se considera un sistema Turing completo que puede simular cualquier otra Máquina de Turing.
+                </p>
+                <div class="gameoflife_controls">
+                    <!-- <input type="checkbox" name="random" id="randomCels">
+                    <label for="random">Generar células random</label> -->
+                    <button id="empezar">EMPEZAR</button>
+                    <button id="reset" class="hide">REINICIAR</button>
+                    
+
+                </div>
+                <div id='canvas'>
+
+                </div>
+                <div>
+                    <p>
+                        Ciclo de vida:
+                        <span id="ciclo">0</span>
+                    </p>
+                    <p>
+                        Células vivas:
+                        <span id="celdasVivas">0</span>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <aside>
+            <h2>Videos de la cursada</h2>
+            <div class="tag_container">
+            </div>
+            <div class="iframe_container">
+                <iframe class="iframe" width="450" height="250" src="https://www.youtube.com/embed/LFubrq6dnE4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+        </aside>
+    </main>
+    <footer></footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/p5.min.js"></script>
+    <script src="scripts/gameoflife.js"></script>
+
+</body>
+
+</html>

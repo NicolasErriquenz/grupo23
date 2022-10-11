@@ -74,4 +74,7 @@ $(".tag").click(function(el){
     var video = aVideos.filter( video => video.id == idClickeado)[0];
     console.log(video.video);
     $(".iframe").attr("src", video.video);
-})
+});
+
+
+/**/
