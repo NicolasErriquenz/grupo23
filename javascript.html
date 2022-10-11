@@ -19,11 +19,11 @@
 
         <nav>
             <ul>
-                <li><a href="#"><span class="fa fa-home"></span>Inicio</a></li>
-                <li><a href="#"><span class="fa fa-heading"></span>Html</a></li>
-                <li><a href="#"><span class="fa fa-edit"></span>Css</a></li>
-                <li><a href="#"><span class="fa fa-code"></span>JavaScript</a></li>
-                <li><a href="#"><span class="fa fa-envelope"></span>Contacto</a></li>
+                <li><a href="index.html"><span class="fa fa-home"></span>Inicio</a></li>
+                <li><a href="html.html"><span class="fa fa-heading"></span>Html</a></li>
+                <li><a href="css.html"><span class="fa fa-edit"></span>Css</a></li>
+                <li><a href="javascript.html"><span class="fa fa-code"></span>JavaScript</a></li>
+                <li><a href="contacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -40,14 +40,14 @@
                     <!-- <input type="checkbox" name="random" id="randomCels">
                     <label for="random">Generar células random</label> -->
                     <button id="empezar">EMPEZAR</button>
-                    <button id="reset" class="hide">REINICIAR</button>
+                    <button id="reset" class="hide">DETENER</button>
                     
 
                 </div>
                 <div id='canvas'>
 
                 </div>
-                <div>
+                <div class="resultado_GOL">
                     <p>
                         Ciclo de vida:
                         <span id="ciclo">0</span>
@@ -57,6 +57,19 @@
                         <span id="celdasVivas">0</span>
                     </p>
                 </div>
+                <p>
+                    Se trata de un juego de cero jugadores, lo que quiere decir que su evolución está determinada por el estado inicial y 
+                    <strong>no necesita ninguna entrada de datos posterior</strong>. El "tablero de juego" es una malla plana formada por cuadrados (las "células") 
+                    que se extiende por el infinito en todas las direcciones. Por tanto, cada célula tiene 8 células "vecinas", que son las que están próximas a ella, 
+                    incluidas las diagonales. Las células tienen dos estados: están "<strong>vivas</strong>" o "<strong>muertas</strong>" (o "encendidas" y "apagadas"). El estado de las células evoluciona 
+                    a lo largo de unidades de tiempo discretas (se podría decir que por turnos). El estado de todas las células se tiene en cuenta para calcular 
+                    el estado de las mismas al turno siguiente. Todas las células se actualizan simultáneamente en cada turno, siguiendo estas reglas:
+                </p>
+                <ol>
+                    <li>Una célula muerta con exactamente 3 células vecinas vivas "nace" (es decir, al turno siguiente estará viva).</li>
+                    <li>Una célula viva con 2 o 3 células vecinas vivas sigue viva, en otro caso muere (por "soledad" o "superpoblación").</li>
+                    <li>Todas las células vivas restantes mueren en el siguiente ciclo. Asimismo, todas las células que estén muertas, continuarán estándolo.</li>
+                </ol>
             </section>
         </div>
         <aside>

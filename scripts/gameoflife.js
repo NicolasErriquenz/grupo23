@@ -30,7 +30,6 @@ $("#reset").click(function () {
     $("#reset").addClass("hide");
 
     gol.setup();
-    gol.noLoop();
 });
 
 var gol = new p5(sketch_GameOfLife, 'canvas');
@@ -48,6 +47,8 @@ function sketch_GameOfLife(p) {
 
     p.setup = function () {
 
+        ciclo = 0;
+        
         p.frameRate(frameRate);
         p.createCanvas(winWidth, winHeight);
 

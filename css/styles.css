@@ -216,6 +216,15 @@ canvas {
     overflow: hidden;
 }
 
+.resultado_GOL{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+ol{
+    margin: 20px;
+}
+
 .hide{
     display:none;
 }
