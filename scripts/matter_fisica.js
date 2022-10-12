@@ -10,7 +10,7 @@ var world;
 function sketch_fisica(p) {
 
     let ancho = 800;
-    let alto = 600;
+    let alto = 800;
 
     p.fondo;
     var objetos = new Array();
@@ -21,8 +21,8 @@ function sketch_fisica(p) {
         engine = Engine.create();
         world = engine.world;
 
-        limites.push(new Limite(p.width/2, p.height - 100, p.width, 10, 0.3, p));
-        limites.push(new Limite(p.width-100, p.height / 2, 200, 10, -0.4, p));
+        limites.push(new Limite(p.width/2, p.height - 100, p.width, 20, 0.3, p));
+        limites.push(new Limite(p.width-100, p.height / 2, 200, 20, -0.4, p));
     }
 
     p.draw = function () {
@@ -42,8 +42,11 @@ function sketch_fisica(p) {
     }
 
     p.mousePressed = function () {
-        objetos.push(new Cuadrado(p.mouseX, p.mouseY, p.random(10,40), p.random(10,40)));
-        objetos.push(new Circulo(p.mouseX, p.mouseY, p.random(10,40)));
+        let red = p.random(255);
+        let blue = p.random(255);
+        let green = p.random(255);
+        //sobjetos.push(new Cuadrado(p.mouseX, p.mouseY, p.random(10,40), p.random(10,40), red, blue, green));
+        objetos.push(new Circulo(p.mouseX, p.mouseY, p.random(10,40), red, blue, green));
     }
 
 }
