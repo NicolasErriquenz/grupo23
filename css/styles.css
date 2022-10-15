@@ -120,6 +120,9 @@ main {
     padding-top: 75px;
 }
 
+button>i{
+    color:white;
+}
 .section_container {
     width: 800px;
     margin: 10px;
@@ -127,16 +130,23 @@ main {
 
 section {
     margin: 10px;
-    background-color: bisque;
+    background-color: rgba(246, 237, 237, 0.724);
     border: 1px solid black;
 }
 
+section>p {
+    color: rgb(23, 23, 23);
+    margin-top: 10px;
+}
+
 aside {
-    background-color: rgb(173, 171, 171);
+    background-color: rgba(246, 237, 237, 0.724);
     width: 500px;
-    margin: 10px;
+    border: 1px solid black;
     box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    margin-top: 21px;
+    margin-right: 21px;
 }
 
 aside>h2 {
@@ -147,6 +157,80 @@ aside>h2 {
 section>h1 {
     padding: 10px;
 }
+
+.pregunta {
+    margin: 20px 0px;
+}
+
+.centrado{
+    text-align: center;
+}
+
+/*FLEXBOX USUARIOS RESTAPI*/
+.contenedor_usuarios {
+    width: 800px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-auto-flow: column;
+}
+
+.usuario {
+    background-color: #DDD;
+    color: white;
+    border: black 1px solid;
+    max-width: 400px;
+    border-radius: 10px;
+
+}
+
+.usuario_perfil {
+    display: flex;
+}
+
+.usuario_perfil>img {
+    width: 22%;
+    margin: 12px;
+
+}
+
+.usuario_datos {
+    width: 70%;
+    color: black;
+    padding: 14px;
+
+}
+
+.usuario_nombre {
+    text-decoration: underline;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.usuario_genero {
+    font-size: 10pt;
+    margin-top: 4px;
+}
+
+.usuario_mail {
+    font-size: 9pt;
+    margin-top: 10px;
+}
+
+.usuario_datos>p>i {
+    color: rgb(78, 75, 75);
+}
+
+.controles_apirest{
+    float: right;
+}
+.loading_gif{
+    width: 50px;
+    
+}
+
+/**/
 
 /* VIDEO TAGS */
 .tag_container {
@@ -233,6 +317,7 @@ ol {
 .hide {
     display: none;
 }
+
 /*..........END GAME OF LIFE........*/
 
 /*...................seccion HTML.......................*/
@@ -241,39 +326,53 @@ ol {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8 {
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8 {
     background-color: rgba(246, 237, 237, 0.724);
     color: rgb(23, 23, 23);
 }
+
 .box1 {
     width: 600px;
     height: 120px;
     padding: 10px;
 }
+
 h2 {
     color: #fff;
     text-shadow: 3px 3px 4px rgb(0, 0, 0);
 }
-.box2  img{
+
+.box2 img {
     width: 180px;
     height: 140px;
     border-radius: 50%;
 }
-    
+
 .box3 {
     width: 500px;
     height: auto;
     padding: 10px;
 }
+
 .box4 {
     width: 280px;
     height: auto;
 }
+
 .box4 img {
     width: 260px;
     height: 100px;
     padding-top: 8%;
 }
+
 .box5 {
     width: 780px;
     height: auto;
@@ -284,6 +383,7 @@ h2 {
     width: 800px;
     height: auto;
 }
+
 .box6 img {
     width: 300px;
     height: auto;
@@ -297,20 +397,24 @@ h2 {
     padding: 10px;
     padding-bottom: 3%;
 }
+
 .box8 {
     width: 100px;
     height: auto;
     padding-bottom: 3%;
 }
+
 .box8 img {
     width: 90px;
     height: 80px;
     margin-top: 25%;
 }
-.box7 a  {
+
+.box7 a {
     text-decoration: none;
     color: #1aa3ff;
 }
+
 .box7 a:hover {
     color: #000066;
 }
@@ -327,31 +431,38 @@ h2 {
     cursor: default;
     transition: all 400ms ease;
 }
+
 .card_container1:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
 }
+
 .card_container1 img {
     width: 280px;
     height: 170px;
     padding-left: 35px;
 }
+
 .card_container1 h3 {
     text-align: center;
     padding: 2px;
 }
+
 .card_container1 p {
     text-align: center;
     padding-top: 3px;
 }
+
 .card_container1 a {
     text-decoration: none;
     color: #1aa3ff;
     padding-left: 40%;
 }
+
 .card_container1 a:hover {
     color: #000066;
 }
+
 /*...................fin seccion HTML...................*/
 
 
@@ -361,33 +472,45 @@ h2 {
     flex-direction: row;
     flex-wrap: wrap;
 }
-.caja1, .caja2, .caja3, .caja4, .caja5, .caja6, .caja7 {
+
+.caja1,
+.caja2,
+.caja3,
+.caja4,
+.caja5,
+.caja6,
+.caja7 {
     background-color: rgba(246, 237, 237, 0.724);
     color: rgb(23, 23, 23);
 }
+
 .caja1 {
     width: 600px;
     height: 120px;
     padding: 10px;
 }
+
 h2 {
     color: #fff;
     text-shadow: 3px 3px 4px rgb(0, 0, 0);
 }
-.caja2  img{
+
+.caja2 img {
     width: 180px;
     height: 140px;
     border-radius: 50%;
 }
-    
+
 .caja3 {
     width: 780px;
     height: auto;
     padding: 10px;
 }
+
 .caja3 img {
     padding-left: 15%;
 }
+
 .caja4 {
     width: 500px;
     height: auto;
@@ -398,6 +521,7 @@ h2 {
     width: 280px;
     height: auto;
 }
+
 .caja5 img {
     width: 270px;
     height: auto;
@@ -409,19 +533,23 @@ h2 {
     height: auto;
     padding: 10px;
 }
+
 .caja7 {
     width: 100px;
     height: auto;
 }
+
 .caja7 img {
     width: 90px;
     height: 80px;
     margin-top: 25%;
 }
-.caja6 a  {
+
+.caja6 a {
     text-decoration: none;
     color: #1aa3ff;
 }
+
 .caja6 a:hover {
     color: #000066;
 }
@@ -438,30 +566,36 @@ h2 {
     cursor: default;
     transition: all 400ms ease;
 }
+
 .card_container:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
 }
+
 .card_container img {
     width: 280px;
     height: 170px;
     padding-left: 35px;
 }
+
 .card_container h3 {
     text-align: center;
     padding: 2px;
 }
+
 .card_container p {
     text-align: center;
     padding-top: 3px;
 }
+
 .card_container a {
     text-decoration: none;
     color: #1aa3ff;
     padding-left: 40%;
 }
+
 .card_container a:hover {
     color: #000066;
 }
-/*...................fin seccion CSS....................*/
 
+/*...................fin seccion CSS....................*/
