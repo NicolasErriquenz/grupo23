@@ -51,25 +51,49 @@
                 <p>
                     Teniendo como servicio <a href="https://gorest.co.in/" target="_blank">https://gorest.co.in/</a>
                     usamos dos de sus endpoint gratuitos:
-                    <ol>
-                        <li>GET https://gorest.co.in/public/v2/users</li>
-                        <li>POST https://gorest.co.in/public/v2/users</li>
-                    </ol>
+                </p>
+                <p>
+                <ol>
+                    <li>GET https://gorest.co.in/public/v2/users</li>
+                    <li>POST https://gorest.co.in/public/v2/users</li>
+                </ol>
+                </p>
+                <p>
                     La primer url nos permite obtener un listado de 10 usuarios creados al azar.
                     La segunda url nos permite insertar un nuevo usuario y obtener su "ID" en la BBDD relacional.
                 </p>
-                <p class="controles_apirest">
-                    <div><button onclick="getData();"> Recargar</button></div>
-                    <div><span class="fa fa-refresh"></span></div>
-                </p>
+                <div class="controles_apirest">
+                    <button onclick="openForm();"><i class="fa fa-plus"></i></button>
+                    <button onclick="getData();"> Recargar</button>
+                </div>
+                <div class="form_nuevoUsuario hide">
+                    <h2 class="h2_apirest">Agregar usuario</h2>
+                    <form action="#" target="" method="get" name="formDatosPersonales">
+
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" />
+
+                        <label for="email" />Email</label>
+                        <input type="email" name="email" id="email" placeholder="email" required />
+
+                        <label for="asunto">Asunto</label>
+                        <select name="gender" id="gender">
+                            <option value="female">Mujer</option>
+                            <option value="male">Hombre</option>
+                        </select>
+
+                        <input type="button" name="enviar" value="enviar datos" onclick="postUser();" />
+                    </form>
+                </div>
                 <p class="centrado" id="loading_p">
                     <img src="images/loading.gif" alt="cargando" class="loading_gif">
                 </p>
-                <p>
-                <div class="contenedor_usuarios">
-                    
+                <div id="listado_usuarios">
+                    <h2 class="h2_apirest">Listado de usuarios</h2>
+                    <div class="contenedor_usuarios">
+
+                    </div>
                 </div>
-                </p>
             </section>
             <section>
                 <h2>Motor de física</h2>
@@ -150,8 +174,25 @@
         </aside>
     </main>
     <footer></footer>
+
+    <div class="fondo_transparente" id="lb">
+        <div class="modal">
+            <div class="modal_cerrar">
+                <span>x</span>
+            </div>
+            <div class="modal_titulo">ATENCIÓN</div>
+            <div class="modal_mensaje">
+                <p id="texto_error"></p>
+            </div>
+            <div class="modal_botones">
+                <button onclick="$('#lb').trigger('close');">Aceptar</button>
+            </div>
+        </div>
+    </div> 
+
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/jquery.lightbox_me.js"></script>
     <script src="scripts/p5.min.js"></script>
     <script src="scripts/gameoflife.js"></script>
     <script src="scripts/matter.js"></script>

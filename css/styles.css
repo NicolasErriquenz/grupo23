@@ -165,8 +165,59 @@ section>h1 {
 .centrado{
     text-align: center;
 }
+.hide{
+    display:none;
+}
 
+.h2_apirest{
+    margin: 20px 0px;
+}
+
+#listado_usuarios{
+    display:none;
+}
 /*FLEXBOX USUARIOS RESTAPI*/
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="button"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="button"]:hover{
+	cursor:pointer;
+}
 .contenedor_usuarios {
     width: 800px;
     display: grid;
@@ -224,12 +275,17 @@ section>h1 {
 
 .controles_apirest{
     float: right;
+    margin: 10px 0px;
 }
 .loading_gif{
     width: 50px;
-    
 }
-
+.lb{
+    min-width: 300px;
+    min-height: 150px;
+    background-color: #EEE;
+    text-align: center;
+}
 /**/
 
 /* VIDEO TAGS */
@@ -599,3 +655,74 @@ h2 {
 }
 
 /*...................fin seccion CSS....................*/
+
+/*MODAL*/
+
+.fondo_transparente{
+    background: rgba(0, 0, 0, 0.226);
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+.modal{
+    background: linear-gradient(0deg,white 70%, rgb(77, 74, 75) 30%);
+    width: 500px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.modal_cerrar{
+    background: white;
+    position: absolute;
+    right: 5px;
+    color: rgb(0, 0, 0);
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.modal_titulo{
+    color: white;
+    font-size: 20px;
+    margin-top: 44px;
+    padding: 0;
+    margin-bottom: -24px;
+}
+.modal_mensaje{            
+   padding: 10px 10px;
+}
+#texto_error{
+    margin-top:40px;
+}
+.modal_botones{      
+    width: 100%;    
+   background: whitesmoke;
+   border-top:whitesmoke 1px;
+   padding-top: 20px;
+   display: flex;
+   justify-content: space-evenly;
+}
+.boton{
+    background: white;
+    padding: 8px 30px;
+    color: crimson;
+    text-decoration: none;
+    border-radius: 25px;
+    border:1px solid crimson
+}
+.boton:hover{
+    background: crimson;
+    color: white;
+}
+/*fin modal*/
