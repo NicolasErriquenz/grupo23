@@ -81,16 +81,19 @@ $(".tag").click(function (el) {
 /*API REST scripts*/
 
 function getData() {
-    let url = "https://gorest.co.in/public/v2/users";
-    let data = {
 
-    };
+    $(".contenedor_usuarios").hide();
+    $("#loading_p").show();
+
+    let url = "https://gorest.co.in/public/v2/users";
+    let contenido = "";
 
     $.ajax({
         url: url,
-        data: data,
+        data: {},
         success: function (resp) {
-
+            $("#loading_p").hide();
+            $(".contenedor_usuarios").show();
             let userDiv = '<div class="usuario">\
                                 <div class="usuario_perfil">\
                                     <img src="images/generic_user.png" alt="%NOMBRE%" title="%NOMBRE%">\
@@ -106,14 +109,14 @@ function getData() {
                 const gender = resp[i].gender;
                 const id = resp[i].id;
                 const name = resp[i].name;
-                let div = replaceAll(userDiv, "%NOMBRE%", name);
+                let div = replaceAll(userDiv, "%NOMBRE%", id+ " " + name);
                 div = replaceAll(div, "%EMAIL%", email);
                 div = replaceAll(div, "%GENDER%", gender);
                 div = replaceAll(div, "%GENERO_DESCRIPCION%", gender == "male" ? "Hombre" : "Mujer");
-
-                $(".contenedor_usuarios").append(div);
+                contenido += div;
             }
             
+            $(".contenedor_usuarios").html(contenido);
         },
         dataType: "json"
     });
