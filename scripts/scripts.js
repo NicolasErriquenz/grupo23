@@ -167,6 +167,10 @@ function postUser() {
             $("#lb").lightbox_me({
                 centered: true,
             });
+
+            $("#nombre").val("");
+            $("#email").val("");
+
             openForm();
             getData();
         },
