@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
     <header>
 		<div class="menu_bar">
@@ -22,12 +21,26 @@
                 <li><a href="seccion1.html"><span class="fa fa-heading"></span>Html</a></li>
                 <li><a href="seccion2.html"><span class="fa fa-edit"></span>Css</a></li>
                 <li><a href="javascript.html"><span class="fa fa-code"></span>JavaScript</a></li>
-                <li><a href="seccioncontacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
+                <li><a href="contacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
 			</ul>
 		</nav>
 	</header>
     <main>
-        <div class="section_container">
+        <div class="section_container4">
+            <div class="contactoform">
+                <h2>Formulario de contacto</h2>
+                <form action="/login.php" id="formulario">
+                    <p>
+                        Usuario:<input type="text" name="usuario" id="usuario">
+                    </p><br>
+                    <P>
+                        Contraseña: <input type="text" name="clave" id="clave" placeholder="Mínimo 6 caracteres">
+                    </P><br>
+                    <input type="submit" value="Ingresar" id="botoningreso">
+                </form>
+
+            </div>
+
         </div>
         <aside>
             <h2>Videos de la cursada</h2>
@@ -47,6 +60,7 @@
     <footer></footer>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/validacioncontact.js"></script>
 </body>
 
 </html>
