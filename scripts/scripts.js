@@ -80,20 +80,26 @@ $(".tag").click(function (el) {
 
 /*API REST scripts*/
 
+function openForm() {
+    $(".form_nuevoUsuario").toggle();
+}
+
 function getData() {
 
-    $(".contenedor_usuarios").hide();
+    $("#listado_usuarios").hide();
     $("#loading_p").show();
 
+    let token = 'Bearer a6cf733ff6a4daf5680855540171824b7203aab851483a54cbabcaf9e531c4f8';
     let url = "https://gorest.co.in/public/v2/users";
     let contenido = "";
 
     $.ajax({
         url: url,
         data: {},
+        headers: { "Authorization": token },
         success: function (resp) {
             $("#loading_p").hide();
-            $(".contenedor_usuarios").show();
+            $("#listado_usuarios").show();
             let userDiv = '<div class="usuario">\
                                 <div class="usuario_perfil">\
                                     <img src="images/generic_user.png" alt="%NOMBRE%" title="%NOMBRE%">\
@@ -109,13 +115,13 @@ function getData() {
                 const gender = resp[i].gender;
                 const id = resp[i].id;
                 const name = resp[i].name;
-                let div = replaceAll(userDiv, "%NOMBRE%", id+ " " + name);
+                let div = replaceAll(userDiv, "%NOMBRE%", id + " " + name);
                 div = replaceAll(div, "%EMAIL%", email);
                 div = replaceAll(div, "%GENDER%", gender);
                 div = replaceAll(div, "%GENERO_DESCRIPCION%", gender == "male" ? "Hombre" : "Mujer");
                 contenido += div;
             }
-            
+
             $(".contenedor_usuarios").html(contenido);
         },
         dataType: "json"
@@ -125,30 +131,53 @@ function getData() {
 getData();
 
 function postUser() {
+    let nombre = $("#nombre").val();
+    let email = $("#email").val();
+    let gender = $("#gender").val();
 
+    if (nombre == null || nombre == undefined || nombre == "") {
+        $("#texto_error").html("EL NOMBRE NO ES VÁLIDO");
+        $("#lb").lightbox_me({
+            centered: true,
+        });
+        return;
+    }
+    
+    if (!validarEmail(email)) {
+        $("#texto_error").html("EL EMAIL NO ES VÁLIDO");
+        $("#lb").lightbox_me({
+            centered: true,
+        });
+        return;
+    }
     let token = 'a6cf733ff6a4daf5680855540171824b7203aab851483a54cbabcaf9e531c4f8';
     let url = "https://gorest.co.in/public/v2/users?access-token=" + token;
     let usuario = {
-        "name": "Nykkodor Cholosion",
-        "gender": "male",
-        "email": "cholosion@gmail.com",
-        "status": "active",
-        "edad": 30
+        "name": nombre,
+        "gender": gender,
+        "email": email,
+        "status": "active"
     };
 
     $.ajax({
         url: url,
         data: usuario,
         success: function (resp) {
-            console.log(resp);
+            $("#texto_error").html("DATOS GUARDADOS CORRECTAMENTE");
+            $("#lb").lightbox_me({
+                centered: true,
+            });
+
+            $("#nombre").val("");
+            $("#email").val("");
+
+            openForm();
+            getData();
         },
         dataType: "json",
         type: "POST"
     });
 }
-
-// postUser();
-
 
 function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
@@ -156,4 +185,9 @@ function escapeRegExp(string) {
 
 function replaceAll(str, find, replace) {
     return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+}
+
+function validarEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
 }

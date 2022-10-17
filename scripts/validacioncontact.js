@@ -6,7 +6,7 @@ function validarFormulario(evento) {
     evento.preventDefault();
     var usuario = document.getElementById('usuario').value;
     if(usuario.length == 0) {
-        alert('No has escrito nada en el usuario');
+        alert('No has escrito tu usuario');
         return;
     }
     var clave = document.getElementById('clave').value;
