@@ -76,9 +76,9 @@ function sketch_fisica(p) {
 
         var tipo = $('input[name=tipo]:checked').val();
         if (tipo == "rectangulos")
-            objetos.push(new Cuadrado(p.mouseX, p.mouseY, p.random(30, 50), p.random(40, 50), red, blue, green, timeIndex));
+            objetos.push(new Cuadrado(p.mouseX, p.mouseY, p.random(30, 50), p.random(40, 50), red, blue, 255, timeIndex));
         else
-            objetos.push(new Circulo(p.mouseX, p.mouseY, p.random(10, 40), red, blue, green, timeIndex));
+            objetos.push(new Circulo(p.mouseX, p.mouseY, p.random(10, 40), 255, 255, green, timeIndex));
 
         timeIndex++;
     }
