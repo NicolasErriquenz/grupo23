@@ -4,61 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Grupo23 - CaC</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
-		<div class="menu_bar">
-			<a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menu</a>
-		</div>
+        <div class="menu_bar">
+            <a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menu</a>
+        </div>
 
-		<nav>
-			<ul>
-				<li><a href="index.html"><span class="fa fa-home"></span>Inicio</a></li>
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="fa fa-home"></span>Inicio</a></li>
                 <li><a href="seccion1.html"><span class="fa fa-heading"></span>Html</a></li>
                 <li><a href="seccion2.html"><span class="fa fa-edit"></span>Css</a></li>
                 <li><a href="javascript.html"><span class="fa fa-code"></span>JavaScript</a></li>
-                <li><a href="contacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
+                <li><a href="seccioncontacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <div class="section_container4">
-            <div class="contactoform">
+        <div class="section_container">
+            <section>
                 <h2>Formulario de contacto</h2>
                 <form action="/login.php" id="formulario">
-                    <p>
-                        Usuario:<input type="text" name="usuario" id="usuario">
-                    </p><br>
-                    <P>
-                        Contraseña: <input type="text" name="clave" id="clave" placeholder="Mínimo 6 caracteres">
-                    </P><br>
-                    <input type="submit" value="Ingresar" id="botoningreso">
+                    <div class="form_input centrado">
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Ej: Pepito">
+                    </div>
+                    <div class="form_input centrado">
+                        <label for="clave">Contraseña:</label>
+                        <input type="text" name="clave" id="clave" placeholder="Mínimo 6 caracteres">
+                    </div>
+                    <div class="form_input centrado">
+                        <input type="submit" value="Ingresar" id="botoningreso">
+                    </div>
                 </form>
 
-            </div>
-
+            </section>
         </div>
         <aside>
             <h2>Videos de la cursada</h2>
             <div class="tag_container">
             </div>
             <div class="iframe_container">
-                <iframe class="iframe"
-                        width="450" 
-                        height="250" 
-                        src="https://www.youtube.com/embed/LFubrq6dnE4" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                <iframe class="iframe" width="450" height="250" src="https://www.youtube.com/embed/LFubrq6dnE4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
         </aside>
     </main>
     <footer></footer>
+
+    <div class="fondo_transparente" id="lb">
+        <div class="modal">
+            <div class="modal_cerrar">
+                <span>x</span>
+            </div>
+            <div class="modal_titulo">ATENCIÓN</div>
+            <div class="modal_mensaje">
+                <p id="texto_error"></p>
+            </div>
+            <div class="modal_botones">
+                <button onclick="$('#lb').trigger('close');">Aceptar</button>
+            </div>
+        </div>
+    </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="scripts/jquery.lightbox_me.js"></script>
     <script src="scripts/scripts.js"></script>
     <script src="scripts/validacioncontact.js"></script>
 </body>

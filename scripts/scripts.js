@@ -106,8 +106,9 @@ function getData() {
                                     <div class="usuario_datos">\
                                         <p class="usuario_nombre">%NOMBRE%</p>\
                                         <p class="usuario_genero"><i class="fa fa-%GENDER%">&nbsp;</i>%GENERO_DESCRIPCION%</p>\
-                                        <p class="usuario_mail">%EMAIL%</p>\
+                                        \
                                     </div>\
+                                    <p class="usuario_mail">%EMAIL%</p>\
                                 </div>\
                             </div>';
             for (let i = 0; i < resp.length; i++) {

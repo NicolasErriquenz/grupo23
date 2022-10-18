@@ -6,16 +6,25 @@ function validarFormulario(evento) {
     evento.preventDefault();
     var usuario = document.getElementById('usuario').value;
     if(usuario.length == 0) {
-        alert('No has escrito tu usuario');
+        $("#texto_error").html("No has escrito tu usuario");
+            $("#lb").lightbox_me({
+                centered: true,
+            });
         return;
     }
     var clave = document.getElementById('clave').value;
     if(clave.length <6) {
-        alert('La clave ingresada no es valida');
+        $("#texto_error").html("La clave ingresada no es valida");
+            $("#lb").lightbox_me({
+                centered: true,
+            });
         return;
     }
     if(usuario.length >0 & clave.length >6 ) {
-        alert('Formulario enviado');
+        $("#texto_error").html("Formulario enviado");
+            $("#lb").lightbox_me({
+                centered: true,
+            });
         return;
     }
     this.submit()

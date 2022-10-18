@@ -23,7 +23,7 @@
                 <li><a href="seccion1.html"><span class="fa fa-heading"></span>Html</a></li>
                 <li><a href="seccion2.html"><span class="fa fa-edit"></span>Css</a></li>
                 <li><a href="javascript.html"><span class="fa fa-code"></span>JavaScript</a></li>
-                <li><a href="contacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
+                <li><a href="seccioncontacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -98,8 +98,20 @@
             <section>
                 <h2>Motor de física</h2>
                 <p>
-                    Matter.js es un motor de física creado para JavaScript.
+                    Matter.js es un motor de física de cuerpos rígidos en 2D escrito en JavaScript. Esta biblioteca le puede ayudar fácilmente a simular física 2D en el navegador.
+                     Ofrece muchas funcionalidades como la habilidad de crear cuerpos rígidos y asignarles propiedades físicas como masa, área o densidad. 
+                     También puede simular diferentes tipos de colisiones y fuerzas como la gravedad y la fricción.
                 </p>
+                <p>
+                    Seleccioná el tipo de forma y luego hacé click en la pantalla para dibujar una figura. 
+                    Los circulos deletrean la palabra <b>"PHYTON"</b>. Los rectángulos deletrean <b>"CODO A CODO"</b>
+                </p>
+                <div class="radio_container">
+                    <p>
+                        DIBUJAR CIRCULOS <input type="radio" name="tipo" value="circulos" checked> 
+                        DIBUJAR RECTANGULOS <input type="radio" name="tipo" value="rectangulos"> 
+                    </p>
+                </div>
                 <div id="canvas_matter">
 
                 </div>

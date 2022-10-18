@@ -1,7 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Seccion CSS</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -9,71 +10,91 @@
 
 <body>
     <header>
-		<div class="menu_bar">
-			<a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menu</a>
-		</div>
+        <div class="menu_bar">
+            <a href="#" class="bt-menu"><span class="fa fa-bars"></span>Menu</a>
+        </div>
 
-		<nav>
-			<ul>
-				<li><a href="index.html"><span class="fa fa-home"></span>Inicio</a></li>
+        <nav>
+            <ul>
+                <li><a href="index.html"><span class="fa fa-home"></span>Inicio</a></li>
                 <li><a href="seccion1.html"><span class="fa fa-heading"></span>Html</a></li>
                 <li><a href="seccion2.html"><span class="fa fa-edit"></span>Css</a></li>
                 <li><a href="javascript.html"><span class="fa fa-code"></span>JavaScript</a></li>
-                <li><a href="contacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
+                <li><a href="seccioncontacto.html"><span class="fa fa-envelope"></span>Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <div class="section_container2">
-            <div class="caja1">
-                <h2>¿Que es CSS?</h2><br>
-                <p>CSS (Cascade Style Sheet) es un lenguaje de diseño que define la apariencia de diversos elementos de un documento HTML.Se ocupa de la estética y el aspecto.</p><br>
-            </div>
+        <div class="section_container">
+            <section>
+                <div class="caja1">
+                    <h2>¿Que es CSS?</h2><br>
+                    <p>CSS (Cascade Style Sheet) es un lenguaje de diseño que define la apariencia de diversos elementos
+                        de un documento HTML.Se ocupa de la estética y el aspecto.</p><br>
+                </div>
 
-            <div class="caja2">
-                <img title="Logo de CSS" src="images/logocc.jpg" alt="Circulo azul con el logo de CSS y el numero 3 en blanco">
-            </div>
+                <div class="caja2 centrado">
+                    <img title="Logo de CSS" src="images/logocc.jpg"
+                        alt="Circulo azul con el logo de CSS y el numero 3 en blanco">
+                </div>
 
-            <div class="caja3">
-                <h2>¿Como lo incorporamos?</h2><br>
-                <p>CSS externo: En el <b>head</b> del documento HTML, debemos incluir una referencia al archivo .css dentro del elemento <b>link</b>.</p><br>
-                <img title="Como conectar CSS a HTML" src="images/linkcss.png" class="img2" alt="Etiqueta link para conectar CSS a HTML"><br>
-                <br><p>Tambien podemos incluir el CSS de manera interna o en linea, tal como se explica en la siguiente <a href="https://www.youtube.com/watch?v=Q5wkoCwsL1A&t=4181s"target="_blank">clase.</a></p>
-            </div>
+                <div class="caja3">
+                    <h2>¿Como lo incorporamos?</h2><br>
+                    <p>CSS externo: En el <b>head</b> del documento HTML, debemos incluir una referencia al archivo .css
+                        dentro del elemento <b>link</b>.</p><br>
+                    <img title="Como conectar CSS a HTML" src="images/linkcss.png" class="img2"
+                        alt="Etiqueta link para conectar CSS a HTML"><br>
+                    <br>
+                    <p>Tambien podemos incluir el CSS de manera interna o en linea, tal como se explica en la siguiente
+                        <a href="https://www.youtube.com/watch?v=Q5wkoCwsL1A&t=4181s" target="_blank">clase.</a>
+                    </p>
+                </div>
 
-            <div class="caja4">
-                <h2>Estructura</h2><br>
-                <p><b>Selector</b>: Marca el elemento sobre el cual vamos a aplicar una regla de estilo.</p><br>
-                <p><b>Propiedad y Valor</b>: Especifica la caracteristica que voy a modificar de un elemento y el valor que adoptara.</p><br>
-                <p><b>Declaración</b>: Señala el estilo que le daremos al selector.</p><br>
-            </div>
+                <div class="caja_doble">
+                    <div class="caja4">
+                        <h2>Estructura</h2><br>
+                        <p><b>Selector</b>: Marca el elemento sobre el cual vamos a aplicar una regla de estilo.</p><br>
+                        <p><b>Propiedad y Valor</b>: Especifica la caracteristica que voy a modificar de un elemento y
+                            el
+                            valor que adoptara.</p><br>
+                        <p><b>Declaración</b>: Señala el estilo que le daremos al selector.</p><br>
+                    </div>
 
-            <div class="caja5">
-                <img title="Estructura de CSS" src="images/structurecss2.jpeg" alt="Etiqueta h1 con el atributo color verde">
-            </div>
-                
-            <div class="caja6">
-                <h2>Videos explicativos</h2><br>
-                <p>CSS posee muchos atributos que podemos utilizar para trabajar el frontend de nuestros proyectos. En los videos de las clases <a href="https://www.youtube.com/watch?v=Q5wkoCwsL1A&t=1196s" target="_blank">CSS 01</a>  y <a href="https://www.youtube.com/watch?v=F3AbrfWOmkA" target="_blank">CSS 02</a>  se profundiza en todos los elementos de codificacion de este lenguaje. </p>
-            </div>
-            <div class="caja7">
-                <img title="Logo de video" src="images/logovideo.png" alt="Circulo rojo con el logo de video en blanco">
-            </div>
+                    <div class="caja5">
+                        <img title="Estructura de CSS" src="images/structurecss2.jpeg"
+                            alt="Etiqueta h1 con el atributo color verde">
+                    </div>
+                </div>
+                <div class="caja6">
+                    <h2>Videos explicativos</h2><br>
+                </div>
+                <div class="caja_doble">
+                    <div class="caja7">
+                        <img title="Logo de video" src="images/logovideo.png"
+                            alt="Circulo rojo con el logo de video en blanco">
+                    </div>
+                    <div class="caja6">
+                        <p>CSS posee muchos atributos que podemos utilizar para trabajar el frontend de nuestros
+                            proyectos.
+                            En los videos de las clases <a href="https://www.youtube.com/watch?v=Q5wkoCwsL1A&t=1196s"
+                                target="_blank">CSS 01</a> y <a href="https://www.youtube.com/watch?v=F3AbrfWOmkA"
+                                target="_blank">CSS 02</a> se profundiza en todos los elementos de codificacion de este
+                            lenguaje. </p>
+                    </div>
+
+                </div>
+            </section>
         </div>
         <aside>
             <h2>Videos de la cursada</h2>
             <div class="tag_container">
             </div>
             <div class="iframe_container">
-                <iframe class="iframe"
-                        width="450"  
-                        height="250" 
-                        src="https://www.youtube.com/embed/LFubrq6dnE4" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                <iframe class="iframe" width="450" height="250" src="https://www.youtube.com/embed/LFubrq6dnE4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
-            
+
             <div class="card_container">
                 <h3>Material extra</h3>
                 <img title="Material extra" src="images/card1.jpeg" alt="Carpeta azul con hojas dentro y una lupa">
@@ -88,7 +109,7 @@
 </body>
 <footer>
     <div>
-        
+
     </div>
 </footer>
 
