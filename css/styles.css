@@ -51,6 +51,10 @@ header nav ul li a:hover {
     transition: all .5s;
 }
 
+header nav ul li a.active {
+    background: #037E8C;
+}
+
 section {
     padding: 20px;
 }
