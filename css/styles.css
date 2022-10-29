@@ -6,7 +6,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.marginTop{
+.marginTop {
     padding-top: 57px;
 }
 
@@ -201,9 +201,23 @@ aside {
     border: 1px solid black;
     box-shadow: 2px 2px 1px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin-top: 21px;
-    margin-right: 21px;
+    margin: 21px;
     padding: 15px;
+}
+
+.resaltado {
+    font-weight: bold;
+    padding: 13px;
+}
+
+.ul_index {
+    padding: 30px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.ul_index li a {
+    color: black;
 }
 
 
@@ -232,6 +246,11 @@ section>h1 {
 }
 
 /* ANIMATE */
+
+.div_animar {
+    margin-top: 20px;
+}
+
 .div_animar p {
     padding: 20px;
     background-color: white;
@@ -257,6 +276,49 @@ section>h1 {
 }
 
 /* FIN ANIMATE */
+
+/* FLEX HOME */
+.contenedor_flex {
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.item {
+    width: 14%;
+    border-radius: 3px;
+    background-color: #091b30;
+    border: 1px solid #0d2035;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px rgb(0 90 250 / 5%), 0 4px 4px rgb(0 90 250 / 5%), 0 8px 8px rgb(0 90 250 / 5%), 0 16px 16px rgb(0 90 250 / 5%);
+}
+
+.item-0 {
+    height: 10%;
+}
+
+.item-1 {
+    height: 40%;
+}
+
+.item-2 {
+    height: 50%;
+}
+
+.item-3 {
+    height: 60%;
+}
+
+.item-4 {
+    height: 20%;
+}
+
+.item-5 {
+    height: 30%;
+}
+
+/* FIN FLEX HOME */
 
 
 /*FLEXBOX USUARIOS RESTAPI*/
