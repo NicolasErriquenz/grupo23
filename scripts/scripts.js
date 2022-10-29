@@ -3,6 +3,11 @@ $(document).ready(main);
 var manu_expandido = true;
 
 function main() {
+
+    $("#owl-demo").owlCarousel({
+        navigation : true
+      });
+    
     $('.menu_bar').click(function () {
         if (manu_expandido) {
             $('nav').animate({

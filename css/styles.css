@@ -6,6 +6,27 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.marginTop{
+    padding-top: 57px;
+}
+
+#owl-demo .item {
+    background: #FFF;
+    padding: 30px 0px;
+    margin-top: 90px;
+    color: #024959;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    width: 90%;
+}
+
+#owl-demo {
+    width: 90%;
+    margin-left: 5%;
+}
+
 body {
     background: url(../images/tiles.png);
     background-size: auto;
@@ -16,6 +37,7 @@ body {
 header {
     width: 100%;
     position: fixed;
+    z-index: 999;
 }
 
 header nav {
@@ -44,6 +66,15 @@ header nav ul li a {
     padding: 20px;
     color: #fff;
     text-decoration: none;
+}
+
+header nav ul li:last-child {
+    float: right;
+}
+
+.nav_img {
+    max-width: 100px;
+    margin-top: 10px;
 }
 
 header nav ul li a:hover {
@@ -115,13 +146,33 @@ ul {
     .section_container {
         width: auto;
     }
+
+    .nav_img {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    header nav ul li:last-child {
+        float: right;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+ol {
+    padding: 0px 104px;
+    margin-top: 10px;
+    color: #433131;
+}
+
+ol li {
+    padding: 5px 10px;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 75px;
 }
 
 button>i {
@@ -179,6 +230,34 @@ section>h1 {
 #listado_usuarios {
     display: none;
 }
+
+/* ANIMATE */
+.div_animar p {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 10px;
+    -webkit-transition: background 1s;
+    /* For Safari 3.0 to 6.0 */
+    transition: background 1s;
+    /* For modern browsers */
+}
+
+.div_animar p::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.div_animar p:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.div_animar p:hover {
+    background: rgb(130, 175, 175);
+}
+
+/* FIN ANIMATE */
+
 
 /*FLEXBOX USUARIOS RESTAPI*/
 
@@ -399,13 +478,15 @@ ol {
 .box4,
 .box5,
 .box6,
-.box7{
+.box7 {
     background-color: rgba(246, 237, 237, 0.724);
     color: rgb(23, 23, 23);
 }
+
 .section_container1 p {
     padding: 10px;
 }
+
 .box1 {
     width: 100%;
     height: auto;
@@ -470,6 +551,7 @@ h2 {
     height: auto;
     padding-bottom: 3%;
 }
+
 .box7 a {
     text-decoration: none;
     color: #1aa3ff;
@@ -481,33 +563,37 @@ h2 {
 
 /*.........................................FOOTER*/
 
-.container_footer { 
+.container_footer {
     width: auto;
     height: 100px;
     background-color: #12262b;
     margin-top: 1%;
- }
- :root{
-    --facebook:#0000cc;
+}
+
+:root {
+    --facebook: #0000cc;
     --instagram: #990099;
     --twitter: #3366ff;
     --whatsapp: #00cc44;
     --map: #e81e1e;
- }
- .redes_sociales {
+}
+
+.redes_sociales {
     display: flex;
     height: auto;
     align-items: center;
     justify-content: center;
- }
- .redes_sociales ul li {
+}
+
+.redes_sociales ul li {
     display: inline-block;
     margin: 30px 5px;
     width: 50px;
     height: 50px;
     text-align: center;
- }
- .redes_sociales ul li a{
+}
+
+.redes_sociales ul li a {
     display: block;
     padding: 15px;
     background-color: rgb(105, 104, 104);
@@ -516,30 +602,38 @@ h2 {
     box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
     transition: .2s;
     border-radius: 50%;
- }
- .redes_sociales ul:hover a{
+}
+
+.redes_sociales ul:hover a {
     filter: blur(1px);
- }
- .redes_sociales ul li a:hover {
+}
+
+.redes_sociales ul li a:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
     filter: none;
- }
- .redes_sociales ul li .facebook:hover {
+}
+
+.redes_sociales ul li .facebook:hover {
     background: var(--facebook);
- }
- .redes_sociales ul li .instagram:hover {
+}
+
+.redes_sociales ul li .instagram:hover {
     background: var(--instagram);
- }
- .redes_sociales ul li .twitter:hover {
+}
+
+.redes_sociales ul li .twitter:hover {
     background: var(--twitter);
- }
- .redes_sociales ul li .whatsapp:hover {
+}
+
+.redes_sociales ul li .whatsapp:hover {
     background: var(--whatsapp);
- }
- .redes_sociales ul li .map:hover {
+}
+
+.redes_sociales ul li .map:hover {
     background: var(--map);
- }
+}
+
 /*.....................................FIN FOOTER*/
 
 
@@ -552,11 +646,13 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-.card_container1 >img {
+
+.card_container1>img {
     width: 60%;
     height: 60%;
     margin-left: 5%;
 }
+
 .card_container1 {
     width: 350px;
     height: 260px;
@@ -735,9 +831,10 @@ h2 {
     color: #000066;
 }
 
-.caja_doble{
+.caja_doble {
     display: flex;
 }
+
 /*...................fin seccion CSS....................*/
 
 
@@ -877,11 +974,12 @@ h2 {
     text-align: right;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     display: inline-block;
     width: 23px;
 }
-.radio_container{
+
+.radio_container {
     width: 100%;
     text-align: center;
     margin: 20px 0px;
